@@ -10,6 +10,7 @@ console.log(activeIndex);
 const links: NavItem[] = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Blog", path: "/blog" },
 ]; // Elementos del nav
 ---
 
@@ -18,7 +19,7 @@ const links: NavItem[] = [
     <li><a href="/">Inicio</a></li>
     <li><a href="/about/">Sobre mi</a></li>
   </ul> -->
-  <ul class="flex gap-2 justify-center">
+  <ul class="flex gap-3 justify-center">
     {
       links.map((item, index) => (
         <li
@@ -34,5 +35,3 @@ const links: NavItem[] = [
     }
   </ul>
 </nav>
-
-{name}
