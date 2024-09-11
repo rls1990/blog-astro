@@ -1,5 +1,16 @@
 ---
+import axios from "axios";
 import Layout from "../layouts/Layout.astro";
+// Astro.locals.nav.activeIndex=1;
+Astro.locals.name = "about";
+Astro.locals.activeIndex = 1;
+
+//const origin = Astro.url.origin;
+
+// await axios
+//   .get(`${Astro.url.origin}/api/blog/1`)
+//   .then((res) => console.log(res.data))
+//   .catch((error) => console.log(error));
 ---
 
 <Layout title="AstroBlog | About">
@@ -19,3 +30,12 @@ import Layout from "../layouts/Layout.astro";
     </p>
   </div>
 </Layout>
+
+<!-- <script>
+  import axios from "axios";
+
+  await axios
+    .get(`${origin}/api/blog/1`)
+    .then((res) => console.log(res.data))
+    .catch((error) => console.log(error));
+</script> -->

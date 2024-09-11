@@ -1,10 +1,38 @@
 ---
+export interface NavItem {
+  name: string;
+  path: string;
+}
+let activeIndex = Astro.locals.activeIndex; // Índice del elemento activo
+let name = Astro.locals.name; // Índice del elemento activo
 
+console.log(activeIndex);
+const links: NavItem[] = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+]; // Elementos del nav
 ---
 
-<nav class="flex gap-2 mb-3 p-7 shadow-md w-full">
-  <ul>
+<nav class="mb-3 p-7 shadow-md w-full">
+  <!-- <ul class="flex gap-2 justify-center">
     <li><a href="/">Inicio</a></li>
     <li><a href="/about/">Sobre mi</a></li>
+  </ul> -->
+  <ul class="flex gap-2 justify-center">
+    {
+      links.map((item, index) => (
+        <li
+          class={
+            activeIndex === index
+              ? "bg-gray-200 text-gray-800"
+              : "text-gray-600"
+          }
+        >
+          <a href={item.path}>{item.name}</a>
+        </li>
+      ))
+    }
   </ul>
 </nav>
+
+{name}

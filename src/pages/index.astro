@@ -1,8 +1,9 @@
 ---
-import Header from "../components/header/Header.astro";
 import Layout from "../layouts/Layout.astro";
+
+//Astro.locals.nav.activeIndex = 0;
+Astro.locals.name = "home";
+Astro.locals.activeIndex = 0;
 ---
 
-<Layout title="AstroBlog | Home">
-  
-</Layout>
+<Layout title="AstroBlog | Home" />
