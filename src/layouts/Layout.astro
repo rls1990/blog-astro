@@ -24,7 +24,7 @@ const { title } = Astro.props;
   <body>
     <div class="flex flex-col min-h-screen">
       <header><Nav /></header>
-      <main class="flex-grow"><slot /></main>
+      <main class="flex-grow min-h-[100vh]"><slot /></main>
       <Footer />
     </div>
   </body>
@@ -43,6 +43,7 @@ const { title } = Astro.props;
   }
   html {
     font-family: system-ui, sans-serif;
+    background-color: #f1f5f9;
   }
   code {
     font-family:
