@@ -1,0 +1,19 @@
+---
+const { platform, username } = Astro.props;
+---
+
+<a class="drop-shadow" href={`https://www.${platform}.com/${username}`}
+  >{platform}</a
+>
+
+<style>
+  a {
+    padding: 0.5rem 1rem;
+    color: rgb(88, 84, 84);
+    background-color: #e2e0e0bd;
+    text-decoration: none;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 3px;
+  }
+</style>
