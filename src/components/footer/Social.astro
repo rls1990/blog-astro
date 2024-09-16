@@ -1,10 +1,18 @@
 ---
-const { platform, username } = Astro.props;
+interface Props {
+  platform: string;
+  username: string;
+  PreIcon?: any;
+  classColor?: string;
+}
+const { platform, username, PreIcon, classColor } = Astro.props;
 ---
 
-<a class="drop-shadow" href={`https://www.${platform}.com/${username}`}
-  >{platform}</a
->
+<a class="drop-shadow" href={`https://www.${platform}.com/${username}`}>
+  <div class="inline-flex gap-3 items-center justify-center">
+    {PreIcon && <PreIcon className={classColor} />}<span>{platform}</span>
+  </div>
+</a>
 
 <style>
   a {
@@ -16,4 +24,8 @@ const { platform, username } = Astro.props;
     border-style: solid;
     border-width: 3px;
   }
+
+  /* svg {
+    @apply fill-green-500;
+  } */
 </style>

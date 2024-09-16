@@ -1,9 +1,22 @@
 ---
-
+import Social from "./Social.astro";
+import { FaTwitter } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { TfiYoutube } from "react-icons/tfi";
 ---
 
-<footer
-  class="w-full p-4 bg-slate-200 shadow md:flex md:items-center md:justify-between md:p-6 mt-20"
->
-  Footer
+<footer class="w-full p-4 bg-slate-200 shadow mt-20">
+  <Social
+    platform="twitter"
+    username="astrodotbuild"
+    PreIcon={FaTwitter}
+    classColor="fill-blue-500"
+  />
+  <Social platform="github" username="withastro" PreIcon={FaGithub} />
+  <Social
+    platform="youtube"
+    username="astrodotbuild"
+    PreIcon={TfiYoutube}
+    classColor="fill-red-800"
+  />
 </footer>
