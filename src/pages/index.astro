@@ -1,4 +1,5 @@
 ---
+import Greeting from "../components/greeting/Greeting";
 import Layout from "../layouts/Layout.astro";
 
 //Astro.locals.nav.activeIndex = 0;
@@ -9,5 +10,6 @@ Astro.locals.activeIndex = 0;
 <Layout title="AstroBlog | Home">
   <div class="container mx-12 flex flex-col gap-3">
     <h1 class="text-[2rem]">Home</h1>
+    <Greeting messages={["Hola", "Qué tal", "Hola a todos"]} client:load />
   </div>
 </Layout>
