@@ -1,0 +1,22 @@
+:global(.dark) .sun {
+  fill: transparent;
+}
+:global(.dark) .moon {
+  fill: white;
+}
+
+.sun {
+  fill: black;
+}
+.moon {
+  fill: transparent;
+}
+
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}

@@ -1,5 +1,6 @@
 ---
-import ThemeIcon from "../theme/ThemeIcon.astro";
+//import ThemeIcon from "../theme/ThemeIcon.astro";
+import ThemeIconReact from "../theme/ThemeIconReact";
 
 export interface NavItem {
   name: string;
@@ -37,5 +38,8 @@ const links: NavItem[] = [
       ))
     }
   </ul>
-  <div class="absolute right-4"><ThemeIcon /></div>
+  <div class="absolute right-4 inline-flex gap-3">
+    <!-- <ThemeIcon /> -->
+    <ThemeIconReact client:load />
+  </div>
 </nav>
