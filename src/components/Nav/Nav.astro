@@ -1,4 +1,6 @@
 ---
+import ThemeIcon from "../theme/ThemeIcon.astro";
+
 export interface NavItem {
   name: string;
   path: string;
@@ -15,12 +17,12 @@ const links: NavItem[] = [
 ]; // Elementos del nav
 ---
 
-<nav class="mb-3 p-7 shadow-md w-full">
+<nav class="mb-3 p-7 shadow-md w-full flex gap-3 justify-center relative">
   <!-- <ul class="flex gap-2 justify-center">
     <li><a href="/">Inicio</a></li>
     <li><a href="/about/">Sobre mi</a></li>
   </ul> -->
-  <ul class="flex gap-3 justify-center">
+  <ul class="inline-flex gap-3">
     {
       links.map((item, index) => (
         <li
@@ -35,4 +37,5 @@ const links: NavItem[] = [
       ))
     }
   </ul>
+  <div class="absolute right-4"><ThemeIcon /></div>
 </nav>

@@ -23,7 +23,9 @@ const { title } = Astro.props;
   </head>
   <body>
     <div class="flex flex-col min-h-screen">
-      <header><Nav /></header>
+      <header>
+        <Nav />
+      </header>
       <main class="flex-grow min-h-[100vh]"><slot /></main>
       <Footer />
     </div>
